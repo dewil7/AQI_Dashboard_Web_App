@@ -64,9 +64,8 @@ def app():
     
     if st.session_state.signout:
         st.text('Welcome, '+st.session_state.username)
+        dashboard.app()
         st.button('Sign out', on_click=t)
 
-        if st.button('Open Dashboard'):
-            dashboard.app()
 
     
